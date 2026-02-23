@@ -27,3 +27,47 @@ We need to understand what are the advantages and problems terraform is solving.
 
 * **Modular Infra:** <br />
     We can develop our own modules or use open source modules to reuse the infra code. Any one can reuse our code and create infra instead of spending more time on their own.
+
+
+resource "type_of_resource" "name_of_resource"{
+	key=value
+}
+
+variable "name_of_variable" {
+	type = string
+	default = ""
+}
+
+terraform.tfvars
+ENV variables TF_VAR_VAR_NAME
+-var "var_name=value"
+
+expression ? "true_val" : "false_val"
+
+count.index
+
+list -> ordered,index based values -> allows duplicates
+set -> order not gaurenteed, remove duplicates
+
+count based loop -> list
+
+for_each loop
+===============
+set or map
+each -> special variable
+
+count, for_each, dynamic(only for repeated code inside resource)
+count -> list based
+for_each -> map or set
+
+data sources
+============
+if you want to get the information from provider, we can use data sources
+
+functions
+=============
+we can't write custom functions in terraform.
+
+FName
+MName
+LName
