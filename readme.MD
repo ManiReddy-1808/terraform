@@ -60,14 +60,18 @@ count, for_each, dynamic(only for repeated code inside resource)
 count -> list based
 for_each -> map or set
 
+resources
+=============
+For Providing the information to provider
+
 data sources
 ============
-if you want to get the information from provider, we can use data sources
+For Getting the information from provider, we can use data sources
 
 functions
 =============
-we can't write custom functions in terraform.
+we can't write custom functions in terraform. But we can develop our own providers that expose function.
+Numeric functions, String, Collection, encoding, filesystem
 
-FName
-MName
-LName
+terraform console
+
