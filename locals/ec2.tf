@@ -1,12 +1,9 @@
 resource "aws_instance" "example" {
-  ami           = "ami-0220d79f3f480ecf5"
-  instance_type = "t3.micro"
+  ami           = local.ami_id   # While refering it should be local (While storing should be locals)
+  instance_type = local.instance_type
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
 
-  tags = {
-    Name = "terraform-state-demo"
-    Project = "roboshop"
-  }
+  tags = local.ec2_final_tags  # Better read-ability
 }
 
 # 1st this SG will be created and then it will be attached to the EC2 instance. 

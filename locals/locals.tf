@@ -1,0 +1,15 @@
+locals {
+  instance_name = "${var.name}-${var.environment}"
+  instance_type = "t3.micro"
+
+    common_tags = {
+        Project = "roboshop"
+        Terraform = "true"
+        Environment = "dev"
+    }
+    ec2_final_tags = merge(local.common_tags, var.ec2_tags )
+    ami_id = data.aws_ami.joindevops.id
+}
+# We can refer other variables inside locals. 
+# Can't override the values inside locals. 
+# We can store functions / expressions in locals.
