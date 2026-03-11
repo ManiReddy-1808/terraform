@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" { # S3 backend configuration for remote state storage
-    bucket  = "daws-remote-state-terraforn" 
+    bucket  = "mani-remote-state-terraform" 
     key     = "remote-state.tfstate" # The path within the bucket where the state file will be stored in s3.
     region  = "us-east-1"
     encrypt = true
