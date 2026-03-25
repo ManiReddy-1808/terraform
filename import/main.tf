@@ -9,3 +9,10 @@ resource "aws_instance" "import" {
     Name = "import-demo-change"
   }
 }
+
+# 1. terraform import is the option
+# 2. create skelton syntax for all the resources and provider file
+# 3. run import command to get the details from terraform state : terraform import aws_instance.import <Instance_ID>
+# 4. terraform plan (we get full details, we can pick and place them into resource definition)
+
+
